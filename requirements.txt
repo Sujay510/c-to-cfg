@@ -1,0 +1,4 @@
+pycparser
+networkx
+pydot
+matplotlib==3.9.2
