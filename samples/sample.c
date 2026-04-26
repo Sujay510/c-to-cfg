@@ -7,6 +7,7 @@ int foo(int x) {
 int main() {
     int a = 5;
     int b = a + 2;
+    
 
     if (b > 5) {
         b = foo(b);
@@ -24,6 +25,6 @@ int main() {
         if (a == 9) break;
         b = b + a;
     }
-
+  a=6;
     return b;
 }

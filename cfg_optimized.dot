@@ -28,7 +28,7 @@ digraph CFG {
     N22 [label="BREAK", fillcolor="#eeeeee"];
     N23 [label="MERGE", fillcolor="#eeeeee"];
     N24 [label="b = (b + a)"];
-    N25 [label="a = 6\nRETURN b"];
+    N25 [label="RETURN b"];
     N26 [label="END main", fillcolor="#c8c8c8", fontsize=13, fontweight=bold, width=1.6, height=0.7];
 
     N0 -> N1;
