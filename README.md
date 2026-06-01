@@ -84,8 +84,8 @@ dot -version
 ### Step 2 — Clone the Repo
 
 ```bash
-git clone https://github.com/maloth-anil/cfg-project.git
-cd cfg-project
+git clone https://github.com/maloth-anil/c-to-cfg.git
+cd c-to-cfg
 ```
 
 ---
