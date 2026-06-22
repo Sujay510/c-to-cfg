@@ -1,4 +1,4 @@
-# CFG Project — C to Control Flow Graph
+# CFG Project  C to Control Flow Graph
 
 Converts any C source code into a Control Flow Graph (CFG),
 runs static analysis, applies optimizations, and provides
@@ -11,9 +11,9 @@ a web dashboard to visualize everything.
 | Phase | What it does |
 |-------|-------------|
 | **Phase 1** | Parses C code and builds a CFG image |
-| **Phase 2** | Static analysis — finds bugs in code |
+| **Phase 2** | Static analysis  finds bugs in code |
 | **Phase 3** | Optimizes CFG and generates optimized C code |
-| **Bonus** | Web dashboard — use everything in browser |
+| **Bonus** | Web dashboard  use everything in browser |
 
 ---
 
@@ -55,7 +55,7 @@ cfg_project/
 
 ## Installation
 
-### Step 1 — Install Graphviz
+### Step 1  Install Graphviz
 
 **Windows**
 ```powershell
@@ -81,16 +81,16 @@ dot -version
 
 ---
 
-### Step 2 — Clone the Repo
+### Step 2  Clone the Repo
 
 ```bash
-git clone https://github.com/maloth-anil/c-to-cfg.git
+git clone https://github.com/Sujay510/c-to-cfg
 cd c-to-cfg
 ```
 
 ---
 
-### Step 3 — Create Virtual Environment
+### Step 3  Create Virtual Environment
 
 **Windows**
 ```powershell
@@ -113,13 +113,13 @@ You should see `(venv)` in your terminal.
 
 ---
 
-### Step 4 — Install Dependencies
+### Step 4  Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-> Windows only — if matplotlib fails:
+> Windows only  if matplotlib fails:
 > ```powershell
 > pip install matplotlib==3.9.2 --only-binary=:all:
 > pip install pycparser networkx pydot streamlit
@@ -127,19 +127,19 @@ pip install -r requirements.txt
 
 ---
 
-## Option A — Run from Terminal
+## Option A  Run from Terminal
 
 Put your C code in `samples/sample.c` then:
 
 **Windows**
 ```powershell
-# Phase 1 only — builds CFG image
+# Phase 1 only  builds CFG image
 python main.py --phase 1
 
-# Phase 2 — CFG + static analysis
+# Phase 2  CFG + static analysis
 python main.py --phase 2
 
-# Phase 3 — CFG + analysis + optimizations
+# Phase 3  CFG + analysis + optimizations
 python main.py --phase 3
 
 # All phases together
@@ -164,9 +164,9 @@ python3 main.py
 
 ---
 
-## Option B — Run Web Dashboard (Streamlit)
+## Option B  Run Web Dashboard (Streamlit)
 
-No need to edit any files — just paste C code in the browser!
+No need to edit any files  just paste C code in the browser!
 
 ### Start the dashboard
 
@@ -198,41 +198,8 @@ http://localhost:8501
 | **Optimized C Code** | View original vs optimized code side by side |
 | **Download Buttons** | Download CFG images and optimized C file |
 
-### Dashboard Screenshot (what you will see)
 
-```
-┌─────────────────────────────────────────────────┐
-│  🔷 C Control Flow Graph Analyzer               │
-│                                                 │
-│  Sidebar          Main Area                     │
-│  ─────────        ────────────────────────────  │
-│  Phase 1 ○        📝 Paste C Code here          │
-│  Phase 2 ○        [code editor box]             │
-│  Phase 3 ●                                      │
-│                   [🚀 Analyze]  [🗑️ Clear]      │
-│  Tips:                                          │
-│  #include         ── Phase 1 ──                 │
-│  auto removed     [CFG image]  [⬇️ Download]    │
-│                                                 │
-│                   ── Phase 2 ──                 │
-│                   [Reaching Defs table]         │
-│                   [Live Vars table]             │
-│                   ⚠️ Dead assignment warning    │
-│                                                 │
-│                   ── Phase 3 ──                 │
-│                   2 folded | 1 dead removed     │
-│                   Before     |    After         │
-│                   [CFG img]  |  [CFG img]       │
-│                                                 │
-│                   Original C | Optimized C      │
-│                   [code]     | [code]           │
-│                   [⬇️ Download Optimized .c]    │
-└─────────────────────────────────────────────────┘
-```
-
----
-
-## Phase 1 — C to CFG
+## Phase 1  C to CFG
 
 Parses C source code and builds a Control Flow Graph.
 
@@ -256,7 +223,7 @@ Parses C source code and builds a Control Flow Graph.
 
 ---
 
-## Phase 2 — Static Analysis
+## Phase 2  Static Analysis
 
 Analyzes the CFG without running the code.
 
@@ -284,7 +251,7 @@ Detects: **dead assignments**
 
 ---
 
-## Phase 3 — Optimizations
+## Phase 3  Optimizations
 
 Uses Phase 2 results to improve the CFG.
 
@@ -304,7 +271,7 @@ int y = x + 5;  →     int y = 15;
 ### Dead Code Elimination
 ```c
 // Before          After
-a = 6;         →  (removed — a never used again)
+a = 6;         →  (removed  a never used again)
 return b;          return b;
 ```
 
@@ -363,7 +330,7 @@ streamlit --version
 
 ## Roadmap
 
-- [x] Phase 1 — C to CFG
-- [x] Phase 2 — Static Analysis
-- [x] Phase 3 — Optimizations
-- [x] Bonus — Web Dashboard (Streamlit)
+- [x] Phase 1  C to CFG
+- [x] Phase 2  Static Analysis
+- [x] Phase 3  Optimizations
+- [x] Bonus  Web Dashboard (Streamlit)
