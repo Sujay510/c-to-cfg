@@ -4,7 +4,7 @@ Converts any C source code into a Control Flow Graph (CFG),
 runs static analysis, applies optimizations, and provides
 a web dashboard to visualize everything.
 
----
+
 
 ## What This Does
 
@@ -15,7 +15,11 @@ a web dashboard to visualize everything.
 | **Phase 3** | Optimizes CFG and generates optimized C code |
 | **Bonus** | Web dashboard  use everything in browser |
 
----
+## My Contribution
+
+Built as part of the CS202 Programming Paradigms course at IIT Ropar (group of 5).
+My specific contributions: CFG construction (cfg_builder.py), live variable analysis,
+and reaching definitions dataflow passes.
 
 ## Project Structure
 
@@ -43,7 +47,7 @@ cfg_project/
         └── unreachable_code.py      ← Phase 3
 ```
 
----
+
 
 ## Requirements
 
@@ -51,7 +55,7 @@ cfg_project/
 - Graphviz software
 - Git
 
----
+
 
 ## Installation
 
@@ -79,7 +83,7 @@ Verify:
 dot -version
 ```
 
----
+
 
 ### Step 2  Clone the Repo
 
@@ -88,7 +92,7 @@ git clone https://github.com/Sujay510/c-to-cfg
 cd c-to-cfg
 ```
 
----
+
 
 ### Step 3  Create Virtual Environment
 
@@ -111,7 +115,7 @@ source venv/bin/activate
 
 You should see `(venv)` in your terminal.
 
----
+
 
 ### Step 4  Install Dependencies
 
@@ -125,7 +129,7 @@ pip install -r requirements.txt
 > pip install pycparser networkx pydot streamlit
 > ```
 
----
+
 
 ## Option A  Run from Terminal
 
@@ -162,7 +166,7 @@ python3 main.py
 | `cfg_optimized.png` | Optimized CFG image |
 | `cfg_output.dot` | DOT source file |
 
----
+
 
 ## Option B  Run Web Dashboard (Streamlit)
 
@@ -221,7 +225,7 @@ Parses C source code and builds a Control Flow Graph.
 | `#include` (auto removed) | ✅ |
 | `/* */` and `//` comments | ✅ |
 
----
+
 
 ## Phase 2  Static Analysis
 
@@ -249,7 +253,7 @@ OUT[B] = ∪ IN[S]  for all successors S
 
 Detects: **dead assignments**
 
----
+
 
 ## Phase 3  Optimizations
 
@@ -279,7 +283,7 @@ return b;          return b;
 Removes CFG nodes with no path from START
 using BFS/DFS traversal.
 
----
+
 
 ## Tech Stack
 
@@ -292,7 +296,7 @@ using BFS/DFS traversal.
 | **pydot** | Python → Graphviz bridge |
 | **Streamlit** | Web dashboard |
 
----
+
 
 ## Troubleshooting
 
@@ -326,7 +330,7 @@ pip install streamlit
 streamlit --version
 ```
 
----
+
 
 ## Roadmap
 
